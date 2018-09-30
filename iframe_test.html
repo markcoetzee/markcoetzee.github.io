@@ -1,0 +1,105 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS DevLabs: JavaScript Starter App</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.8/"></script>
+  
+  <script>  
+    let view;
+    
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/layers/FeatureLayer",
+      "dojo/domReady!"
+    ], function(Map, MapView, FeatureLayer) {
+      
+      var map = new Map({
+        basemap: "topo-vector",
+      });
+      
+
+
+      // Define a popup for Trailheads
+      var popupWaterMonitoring  = {
+        "title": "WaterMonitoring ",
+        "content": [
+          {  
+          type: "text",
+          text: "Management zone : {SWManagementZone}" +
+            "<br>Records Flow {Cont_Flow} <br> Water quality {RWQuality}" 
+          },  
+          {
+            // You can set a media element within the popup as well. This
+            // can be either an image or a chart. You specify this within
+            // the mediaInfos. The following creates a pie chart in addition
+            // to two separate images. The chart is also set up to work with
+            // related tables. Similar to text elements, media can only be set within the content.
+            type: "media",
+            mediaInfos: [ {
+              title: "<b>Welcome to Beverly Hills</b>",
+              type: "image",
+              value: {
+                sourceURL: "http://www.horizons.govt.nz/HRC/media/Data/Webcam/HerbWainui_latest_photo.jpg"
+              }
+            }, {
+              title: "<b>Palm tree lined street</b>",
+              type: "image",
+              value: {
+                sourceURL: "http://www.horizons.govt.nz/HRC/media/data/Webcam/MakinoGates_latest_photo.jpg"
+              }
+            }]
+          }
+          
+          
+           ]
+      }
+
+      // Create the layer and set the popup
+      var WaterMonitoring  = new FeatureLayer({
+        url: "https://services1.arcgis.com/VuN78wcRdq1Oj69W/ArcGIS/rest/services/MRLA_WaterMonitoring/FeatureServer/0",
+        outFields: ["LawaSiteID"],
+        popupTemplate: popupWaterMonitoring,
+        position: "top-right"
+      });   
+
+       // Add the layer
+        map.add(WaterMonitoring );
+      
+      
+      view = new MapView({
+        container: "viewDiv",
+        map: map,
+        center: [ 175.618 ,  -40.37],
+        zoom: 10,
+        popup: {
+          dockEnabled: true,
+          dockOptions: {
+            // Disables the dock button from the popup
+            buttonEnabled: false,
+            // Ignore the default sizes that trigger responsive docking
+            breakpoint: false,
+            position: "bottom-center",
+
+          }
+        },
+      });
+      
+    });
+  </script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
