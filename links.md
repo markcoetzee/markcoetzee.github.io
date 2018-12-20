@@ -6,6 +6,9 @@
 # Data Science
 - https://thinkingmachin.es/expertise/?_ga=2.211086101.1224304258.1542567811-1705002452.1542567811
 - https://www.wandb.com/blog/how-to-build-a-machine-learning-team-when-you-are-not-google-or-facebook
+- https://github.com/OpenMined/PySyft/tree/master/examples/tutorials
+- https://pythonlinks.info/tensorflow-dev-summit-2018
+- https://www.nesta.org.uk/
 
 # Machine Learning resources
 - https://sgfin.github.io/learning-resources/
@@ -24,6 +27,7 @@
 - https://www.gov.uk/government/news/government-launch-call-for-evidence-to-be-geospatial-world-leader
 - [Geospatial data is infrastructure](https://theodi.org/article/geospatial-data-is-infrastructure-our-response-to-the-uks-national-geospatial-strategy/)
 - https://theodi.org/article/what-we-learned-from-our-survey-of-how-local-government-is-publishing-and-using-geospatial-data/
+- https://github.com/linz/linz_basemaps
 
 # Story Maps
 - https://storymap.knightlab.com/#examples
@@ -40,3 +44,6 @@
 
 # Open Data
 - https://wiki.osgeo.org/wiki/INSPIRE
+
+# EM
+- https://www.transport.govt.nz/multi-modal/kaikoura-earthquake-recovery/
