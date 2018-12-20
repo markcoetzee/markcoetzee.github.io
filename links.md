@@ -44,6 +44,7 @@
 
 # Open Data
 - https://wiki.osgeo.org/wiki/INSPIRE
+- https://dspace.lboro.ac.uk/dspace-jspui/bitstream/2134/28364/3/Kawalek_Data-As-Infrastructure.pdf
 
 # EM
 - https://www.transport.govt.nz/multi-modal/kaikoura-earthquake-recovery/
