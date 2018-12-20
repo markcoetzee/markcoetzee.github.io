@@ -45,6 +45,8 @@
 # Open Data
 - https://wiki.osgeo.org/wiki/INSPIRE
 - https://dspace.lboro.ac.uk/dspace-jspui/bitstream/2134/28364/3/Kawalek_Data-As-Infrastructure.pdf
+- https://medium.com/@JonSRobertson/toward-treating-data-as-infrastructure-8cd68c692f6d
+- https://www.victoria.ac.nz/news/2018/06/why-data-is-not-the-new-oil
 
 # EM
 - https://www.transport.govt.nz/multi-modal/kaikoura-earthquake-recovery/
